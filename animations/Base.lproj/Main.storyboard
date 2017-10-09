@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="dmW-gn-QDK" userLabel="cat image view">
+                                <rect key="frame" x="87" y="234" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dmW-gn-QDK" secondAttribute="height" multiplier="1:1" id="mJS-PP-bpa"/>
+                                    <constraint firstAttribute="width" constant="200" id="p35-jn-6ra"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eyes" translatesAutoresizingMaskIntoConstraints="NO" id="EfE-I5-VWs" userLabel="eye image view">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EfE-I5-VWs" secondAttribute="height" multiplier="1:1" id="5nA-S1-0bh"/>
+                                    <constraint firstAttribute="height" constant="200" id="pGc-1b-aod"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7W-Pk-eg4">
+                                <rect key="frame" x="164" y="627" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="327-g6-U6f"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popUpCat1" translatesAutoresizingMaskIntoConstraints="NO" id="UIU-9j-CQS">
+                                <rect key="frame" x="87" y="233.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="9WC-nV-wSQ"/>
+                                    <constraint firstAttribute="width" secondItem="UIU-9j-CQS" secondAttribute="height" multiplier="1:1" id="eE9-Zk-HOm"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EfE-I5-VWs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0cQ-CZ-Buc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q7W-Pk-eg4" secondAttribute="bottom" constant="10" id="7a4-2D-Iel"/>
+                            <constraint firstItem="q7W-Pk-eg4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9eq-zm-IS1"/>
+                            <constraint firstItem="UIU-9j-CQS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EcO-NP-sjr"/>
+                            <constraint firstItem="dmW-gn-QDK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="F67-a2-8c3"/>
+                            <constraint firstItem="dmW-gn-QDK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dlN-Jt-NWP"/>
+                            <constraint firstItem="EfE-I5-VWs" firstAttribute="leading" secondItem="dmW-gn-QDK" secondAttribute="leading" id="ocg-ld-J1o"/>
+                            <constraint firstItem="UIU-9j-CQS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="s03-8x-bDE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="catImageView" destination="dmW-gn-QDK" id="6EB-ae-PlF"/>
+                        <outlet property="eyesImageView" destination="EfE-I5-VWs" id="bpg-sj-IIV"/>
+                        <outlet property="eyesToBodyConstraint" destination="ocg-ld-J1o" id="j9y-ZZ-XwY"/>
+                        <outlet property="popUpCatImageView" destination="UIU-9j-CQS" id="hgU-JD-kcK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat" width="300" height="300"/>
+        <image name="eyes" width="300" height="300"/>
+        <image name="popUpCat1" width="300" height="300"/>
+    </resources>
+</document>
